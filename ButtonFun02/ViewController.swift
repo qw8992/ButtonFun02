@@ -22,6 +22,9 @@ class ViewController: UIViewController {
         count = count+1
     labelC.text = String(count)
         mylabel.text = "A"
+        if count==9 {
+            count=0
+        }
     }
 
     @IBAction func buttonBpressed(_ sender: Any) {
