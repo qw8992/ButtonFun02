@@ -13,23 +13,25 @@ class ViewController: UIViewController {
     @IBOutlet weak var labelB: UILabel!
     @IBOutlet weak var labelC: UILabel!
     var count = 0
-    
+    var check = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 }
     @IBAction func buttonpress(_ sender: Any) {
-        count = count+1
     labelC.text = String(count)
         mylabel.text = "A"
-        if count==9 {
-            count=0
+        if(count==0) {
+            check = 0;
+        }
+        if(count==10) {
+            check = 1;
+        }
+            if(check==0) {
+                count = count+1;
+            }
+        if(check==1) {
+            count = count-1;
+        }
         }
     }
-
-    @IBAction func buttonBpressed(_ sender: Any) {
-   labelB.text = "B"
-    }
-    
-}
-
